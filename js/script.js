@@ -52,6 +52,8 @@ const loader = document.querySelectorAll('.dash');
 let counter = 0;
 
 document.addEventListener('click', (event) => {
+    if(!event.target.classList.contains('btn')) return;
+
     loader.forEach(i=>{
         if (i.closest('.btn') === event.target) {
            i.style.backgroundColor = '#18CFAB'  
@@ -65,8 +67,8 @@ document.addEventListener('click', (event) => {
         galleryItems.forEach( (i, index) => {
             if(counter < 2) {
                 if(index > 20) {
-                (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
-                i.style.display = 'inline'                      
+                    (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
+                    i.style.display = 'inline'                      
                 }
             } else {
                 (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
