@@ -66,7 +66,7 @@ document.addEventListener('click', (event) => {
 
         galleryItems.forEach( (i, index) => {
             if(counter < 2) {
-                if(index > 20) {
+                if(index > 12 && index <= 24) {
                     (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
                     i.style.display = 'inline'                      
                 }
