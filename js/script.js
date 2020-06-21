@@ -45,18 +45,42 @@ function onClick(event) {
 
 // Our Amazing Work section
 
-const worksButton = document.querySelector('.works').querySelector('.btn');
 const worksListUl = document.querySelector('.works-menu');
 const worksGalleryUl = document.querySelector('.works-gallery');
 const galleryItems = worksGalleryUl.querySelectorAll('li');
+const loader = document.querySelectorAll('.dash');
+let counter = 0;
 
 document.addEventListener('click', (event) => {
-    if (event.target !== worksButton) return;
-    galleryItems.forEach( i => {
-        (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
-        i.style.display = 'inline'
-    })
-    worksButton.style.display = 'none';
+    loader.forEach(i=>{
+        if (i.closest('.btn') === event.target) {
+           i.style.backgroundColor = '#18CFAB'  
+        }
+    });
+
+    counter++;
+    
+    setTimeout(() => {
+
+        galleryItems.forEach( (i, index) => {
+            if(counter < 2) {
+                if(index > 20) {
+                (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
+                i.style.display = 'inline'                      
+                }
+            } else {
+                (i.classList.contains('hidden')) ? i.classList.replace('hidden', 'all') : false;
+                i.style.display = 'inline'  ;
+                event.target.style.display = 'none'
+            }
+        })
+        loader.forEach(i=>{
+            if (i.closest('.btn') === event.target) {
+               i.style.backgroundColor = 'transparent'  
+            }
+        });
+    }, 2000);
+
 })
 
 worksListUl.addEventListener('click', (event) => {
