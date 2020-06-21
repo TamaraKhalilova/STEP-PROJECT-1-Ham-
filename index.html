@@ -9,10 +9,10 @@
     <link href="./slick/slick.css" rel="stylesheet">
     <link href="./slick/slick-theme.css" rel="stylesheet">
 
-    <link href="../HTML+CSS/HW5/fonts/Font_Awesome/fontawesome/all.min.css" rel="stylesheet">
+    <link href="./fonts/Font_Awesome/fontawesome/all.min.css" rel="stylesheet">
     <link href="./css/main.css" rel="stylesheet">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
     <script src="./slick/slick.min.js" defer></script>
 
     <script src="./../../Other/plugins/masonry-docs/masonry.pkgd.min.js" defer></script>
@@ -24,10 +24,10 @@
     <div class="page">
         <header class="header-section">
             <nav class="header">
-                <div class="centered">
+                <a class="centered" href="#void">
                     <div class="logo-img accented centered">H</div>
                     <span class="logo-text">the<span class="colored">Ham</span></span>
-                </div>
+                </a>
                 <ul class="navbar accented">
                     <li class="navbar-item"><a href="#void">home</a></li>
                     <li class="navbar-item"><a href="#void">about</a></li>
@@ -535,7 +535,7 @@
                     </li>
                 </ul>
 
-                <a href='#void' class="btn load accented"><img class='plus' src="./img/works-section/+.png">load more</a>
+                <a href='#void' class="btn load accented"><i class='fas fa-plus'></i>Load more</a>
                 </div>
         </section>
 
@@ -702,7 +702,7 @@
                 <div class="best-images-gallery">
 
                     <div class="item-masonry sizer large">
-                        <img src="./img/best-images-section/best1.jpg">
+                        <img src="./img/best-images-section/best1.jpg" style="height: 263px;">
                         <div class="cover-item-gallery">
                             <a href="#void">
                                 <i class="fas fa-search"></i>
@@ -710,7 +710,7 @@
                         </div>
                     </div>
                     <div class="item-masonry sizer large">
-                        <img src="./img/best-images-section/best2.jpg">
+                        <img src="./img/best-images-section/best2.jpg" style="height: 380px;">
                         <div class="cover-item-gallery">
                             <a href="#void">
                                 <i class="fas fa-search"></i>
@@ -737,7 +737,15 @@
                             </a>
                         </div>
                     </div>
-                    <div class="item-masonry sizer">
+                    <div class="item-masonry sizer small">
+                        <img src="./img/best-images-section/mini3.jpg">
+                        <div class="cover-item-gallery">
+                            <a href="#void">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-masonry sizer small">
                         <img src="./img/best-images-section/mini3.jpg">
                         <div class="cover-item-gallery">
                             <a href="#void">
@@ -753,7 +761,15 @@
                             </a>
                         </div>
                     </div>
-                    <div class="item-masonry sizer">
+                    <div class="item-masonry sizer small">
+                        <img src="./img/best-images-section/mini3.jpg">
+                        <div class="cover-item-gallery">
+                            <a href="#void">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-masonry sizer small">
                         <img src="./img/best-images-section/mini3.jpg">
                         <div class="cover-item-gallery">
                             <a href="#void">
@@ -769,46 +785,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="item-masonry sizer">
-                        <img src="./img/best-images-section/mini3.jpg">
-                        <div class="cover-item-gallery">
-                            <a href="#void">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-masonry sizer">
-                        <img src="./img/best-images-section/mini3.jpg">
-                        <div class="cover-item-gallery">
-                            <a href="#void">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-masonry sizer">
-                        <img src="./img/best-images-section/mini3.jpg">
-                        <div class="cover-item-gallery">
-                            <a href="#void">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-masonry sizer">
-                        <img src="./img/best-images-section/mini3.jpg">
-                        <div class="cover-item-gallery">
-                            <a href="#void">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="item-masonry sizer">
-                        <img src="./img/best-images-section/mini3.jpg">
-                        <div class="cover-item-gallery">
-                            <a href="#void">
-                                <i class="fas fa-search"></i>
-                            </a>
-                        </div>
-                    </div>
+
 
 
                     <!-- <div class="item-masonry sizer">
@@ -839,6 +816,35 @@
 
 
 
+                    <div class="item-masonry sizer small">
+                        <img src="./img/best-images-section/mini3.jpg">
+                        <div class="cover-item-gallery">
+                            <a href="#void">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-masonry sizer small">
+                        <img src="./img/best-images-section/mini3.jpg">
+                        <div class="cover-item-gallery">
+                            <a href="#void">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="item-masonry sizer">
+                        <img src="./img/best-images-section/mini3.jpg">
+                        <div class="cover-item-gallery">
+                            <a href="#void">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+
+
                     <div class="item-masonry sizer large">
                         <img src="./img/best-images-section/best4.jpg">
                         <div class="cover-item-gallery">
@@ -864,13 +870,18 @@
                         </div>
                     </div>
 
+                
+
+
+
+
                 </div>
-                <a href='#void' class="btn load accented"><img class='plus' src="./img/works-section/+.png">load more</a>
+                <a href='#void' class="btn load accented"><i class="fas fa-plus"></i>load more</a>
             </div>
         </section>
 
         <footer>
-            <span class="small-text" style="color: #AEAEAE;">&copy; Copyright 2015 <span style="color: #18CFAB;">theHam</span> &nbsp;&#10072;&nbsp; All Rights Reserved</span>
+            <span class="small-text" style="color: #AEAEAE;">&copy; Copyright 2015 <a href="#void" style="color: #18CFAB;">theHam</a> &nbsp;&#10072;&nbsp; All Rights Reserved</span>
         </footer> 
     </div>
 </body>

@@ -82,9 +82,10 @@
 .load{
     box-shadow: none;
 }
-.plus{
+.fa-plus{
     margin-right: 10px;
-    transform: translateY(-10%);
+    /* border: 1px solid red; */
+    /* transform: translateY(-10%); */
 }
 .small-text{
     color: #777777;

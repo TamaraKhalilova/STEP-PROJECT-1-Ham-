@@ -13,7 +13,10 @@
 }
 .sizer{
     border: 1px solid blue;
-    width: 8%;
+    width: 10%;
+}
+.small{
+    margin-right: 10px;
 }
 .medium:not(:last-child){
     width: 180px;
@@ -23,7 +26,8 @@
 }
 .large{
     width: 32%;
-    /* margin: 0 10px 20px 0; */
+    /* margin-bottom: 20px; */
+    margin: 0 10px 20px 0;
 }
 .item-masonry{
     position: relative;

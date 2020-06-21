@@ -131,7 +131,7 @@ $(document).ready( function(){
 
     container.masonry({
         itemSelector: '.item-masonry',
-        columnWidth: 15,
+        columnWidth: 10,
         percentPosition: true,
         // gutter: 10,
     })
