@@ -133,7 +133,7 @@ $(document).ready( function(){
         itemSelector: '.item-masonry',
         columnWidth: 10,
         percentPosition: true,
-        // gutter: 10,
+        // gutter: 1,
     })
 
 })
