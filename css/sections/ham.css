@@ -5,7 +5,7 @@
 .header-section::before{
     content: '';
     position: absolute;
-    top:110px;
+    top:112px;
     left: 0;
     bottom: 0;
     right: 0;
