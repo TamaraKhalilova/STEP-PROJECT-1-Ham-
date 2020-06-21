@@ -1,0 +1,104 @@
+.works{
+    background: #E9EDEF;
+    width: 100%;
+}
+.works > .section {
+    display: grid;
+    grid-template-rows: auto repeat(3, auto);
+    gap: 4.4em;
+    justify-items: center;
+}
+.works .heading{
+    justify-self: stretch;
+}
+.works-menu{
+    margin-top: 1em;
+    font-size: 0.8em;
+}
+.works .menu-item{
+    background-color: transparent;
+    padding: 1.4em 1.1em;   
+    border-style: solid;
+    border-width: 1px;
+    border-color: #DADADA #DADADA #DADADA transparent;
+    width: auto;
+}
+.works .menu-item:first-child {
+    border-left: 1px solid #DADADA;
+    padding: 1.4em 2em;
+}
+.works .menu-item:hover{
+    border-color: #18CFAB;
+    color: #18CFAB;
+}
+.works-gallery{
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
+}
+.works-gallery img {
+    width: 100%;
+    height: 100%;
+}
+.flip-box {
+	perspective: 1500px;
+}
+.flip-box__flipper {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transition: transform 2s;
+	transform-style: preserve-3d;
+}
+.flip-box__front {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+.flip-box__back {
+	position: absolute;
+	width: 100%;
+    height: 100%;
+    top:0;
+	backface-visibility: hidden;
+	transform: rotateY(180deg);
+	border-top: 2px solid #18CFAB;
+}
+.flip-box:hover .flip-box__flipper {
+	transform: rotateY(180deg);
+}
+.flip-box__back--content{
+    height: 6.5em;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.flip-box__back--content .accented{
+    color:#18CFAB;
+    font-size: 0.8em;   
+}
+.flip-box__back--content-icon-box {
+    width: 5.5em;
+    justify-content: space-between;
+    display: flex;
+}
+.works .common-heading{
+    margin-top: 1em;
+    font-size: 0.6em;   
+}
+.circle{
+    border: 1px solid #18CFAB;
+    border-radius: 50%;
+    padding: 0.8em;
+    text-align: center;
+}
+.circle:last-child{
+    background-color: #18CFAB;
+}
+.hidden{
+    display: none;
+}
+

@@ -1,0 +1,87 @@
+.header-section{
+    background: url('../../img/sections-bg/header.jpg');
+    background-attachment: fixed;
+}
+.header-section::before{
+    content: '';
+    position: absolute;
+    top:110px;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 100%;
+    height: 880px;
+    background-color: rgba(61, 58, 58, 0.382);
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(94, 93, 88, 0.6);
+}
+.logo-img{
+    background: url('../../img/sections-bg/polygon.png');
+    width: 1.8em;
+    height: 2.08em;
+    font-size: 2em;
+    z-index: 2;
+}
+.logo-text{
+    color: white;
+    font-size: 2em;
+    margin-left: 0.3em;
+    z-index: 2;
+}
+.logo-text > .colored {
+    text-transform: none;
+}
+.navbar{
+    vertical-align: middle;
+    opacity: 0.6;
+    z-index: 2;
+}
+.navbar-item{
+    display: inline-block;
+    padding: 3em 0 2.8em 0;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+.navbar-item:hover{
+    color: #18CFAB;
+    border-bottom: 2px solid #18CFAB;
+}
+.navbar-item + .navbar-item{
+    margin-left: 1.3em;
+}
+.section.ham{
+    flex-direction: column;
+    height: calc(100% - 112px);
+    padding: 15em 0;
+}
+.slogan-box{
+    height: 13.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.slogan{
+    font-size: 2em;
+}
+.ham .common-heading{
+    color: rgb(189, 187, 187);
+}
+.ham-creative{
+    font-size: 4.8em;
+}
+.button-box{
+    margin-top: 8.2em;
+    display: flex;
+    width: 22.7em;
+    justify-content: space-between;
+}
+.btn.btn-purchase{
+    background-color: #00CBF6;
+}

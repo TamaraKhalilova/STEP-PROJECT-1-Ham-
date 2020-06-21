@@ -1,0 +1,37 @@
+.news > .section {
+    background: white;
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    gap: 5.75em;
+    justify-content: stretch;
+}
+.news-gallery{
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.9em 2.25em;
+}
+.news .menu-item{
+    width: 100%;
+}
+/* .news-gallery-description {
+
+
+} */
+.news .accented {
+    color: #717171;
+    text-transform: none;
+    font-size: 1.2em;
+    padding-bottom: 0.6em;
+    padding: 0.8em;    
+}
+.news-gallery-date{
+    padding: 0.7em 1.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    background: #203E38;
+    color: #FFFFFF;
+}

@@ -1,0 +1,19 @@
+.about{
+    margin-top:10px;
+}
+.about-box{
+    height: 22.5em;
+    width: 25%;
+    background: #18CFAB;
+}
+.about-box:nth-child(odd){
+    background: #1C2A33;
+    color: #18CFAB;
+}
+.about-box__content{
+    text-align: center;
+    height: 10.75em;
+    flex-direction: column;
+    justify-content: space-between;
+    display: flex;
+}
