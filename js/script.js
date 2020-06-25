@@ -3,12 +3,14 @@
 // Our Services section
 
 const liList = document.querySelector('.services-menu').querySelectorAll('li');
-const imgList = document.querySelector('.services').querySelectorAll('img');
-const pList = document.querySelector('.services-description').querySelectorAll('li');
+const imgList = document.querySelector('.services-description').querySelectorAll('img');
+const pList = document.querySelector('.services-description').querySelectorAll('p');
 const tabs = document.querySelector('.services-menu');
 
 for (let i=0; i < liList.length; i++) {
+    
   liList[i].classList.add(liList[i].textContent.replace(' ', '-').toLowerCase());
+
   pList[i].classList.add(liList[i].textContent.replace(' ', '-').toLowerCase());
   imgList[i].classList.add(liList[i].textContent.replace(' ', '-').toLowerCase());
   pList[i].style.minHeight = `144px`;
@@ -51,9 +53,19 @@ const galleryItems = worksGalleryUl.querySelectorAll('li');
 const loader = document.querySelectorAll('.dash');
 let counter = 0;
 
-document.addEventListener('click', (event) => {
-    if(!event.target.classList.contains('btn')) return;
 
+worksListUl.addEventListener('click', (event) => {
+    worksListUl.querySelectorAll('li').forEach( i => i.classList.remove('filtered'));
+    event.target.classList.add('filtered');
+    galleryItems.forEach( i => {
+            i.style.display = 'none';   
+            (i.classList.contains(event.target.id)) ? i.style.display = 'inline' : false;
+    });
+});
+
+
+document.querySelector('.works').addEventListener('click', (event) => {
+    if(!event.target.classList.contains('btn')) return;
     loader.forEach(i=>{
         if (i.closest('.btn') === event.target) {
            i.style.backgroundColor = '#18CFAB'  
@@ -63,6 +75,8 @@ document.addEventListener('click', (event) => {
     counter++;
     
     setTimeout(() => {
+        worksListUl.querySelectorAll('li').forEach( i => i.classList.remove('filtered'));
+        worksListUl.querySelectorAll('li')[0].classList.add('filtered');
 
         galleryItems.forEach( (i, index) => {
             if(counter < 2) {
@@ -82,22 +96,13 @@ document.addEventListener('click', (event) => {
             }
         });
     }, 2000);
-
 })
-
-worksListUl.addEventListener('click', (event) => {
-    galleryItems.forEach( (i) => {
-            i.style.display = 'none';   
-            (i.classList.contains(event.target.id)) ? i.style.display = 'inline' : false;
-    });
-});
-
 
 // Breaking news
 
 const news = document.querySelector('.news');
 
-document.addEventListener('mouseover', (event) => {
+news.addEventListener('mouseover', (event) => {
     if(!news.contains(event.target)) return;
 
     const newsGalleryBox = event.target.closest('a');
@@ -133,7 +138,7 @@ for(let i=0; i < slickDotes.length; i++) {
     (!slickDotes[i].classList.contains('slick-active')) ? slickDotes[i].style.bottom='0' : slickDotes[i].style.bottom='10px'
 }
 
-document.addEventListener('click', (event) => {
+document.querySelector('.testimonials').addEventListener('click', (event) => {
     slickDotes.forEach(i=>i.style.bottom = '');
     document.querySelector('li.slick-active').style.bottom = '10px';
 })
@@ -159,7 +164,6 @@ $(document).ready( function(){
         itemSelector: '.item-masonry',
         columnWidth: 10,
         percentPosition: true,
-        // gutter: 1,
     })
 
 })

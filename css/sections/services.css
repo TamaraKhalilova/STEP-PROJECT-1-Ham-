@@ -1,26 +1,20 @@
 .services{
-    display: grid;
-    gap: 3.3em 1em;
-    grid-template:
-        "heading heading heading heading heading heading" auto
-        "menu menu menu menu menu menu" auto
-        "img p p p p p" auto / 1fr 1fr 1fr 1fr 1fr 1fr;
-    justify-content: stretch;
-}
-.services .heading{
-    grid-area: heading;
+    display: flex;
+    flex-direction: column;
+    height: 376px;
+    justify-content: space-between;
 }
 .services-menu{
     grid-area: menu;
+    display: flex;
     margin-top: 2.7em;
 }
 .menu-item{
-    height: 100%;
+    flex-grow: 1;
     background: #F8FCFE;
     border-width: 1px;
     border-style: solid;
     border-color: #EDEFEF transparent;
-    width: 16.6%;
     color: #717171;
     position: relative;
     padding: 1.4em 0;
@@ -36,15 +30,17 @@
     top: 100%;
 }
 .services-img{
-    grid-area: img;
+    margin-right: 15px;
     width: 192px;
     height: 139px;
 }
-.services-description{
-    line-height: 1.84em;
-    grid-area: p;
+.services-description {
+    line-height: 1.84em;    
     color: #777777;
     font-size: 0.84em;
+}
+.services-description > li {
+    display: flex;
 }
 .active {
     background-color:#18CFAB;

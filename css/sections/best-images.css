@@ -29,7 +29,6 @@
 }
 .item-masonry{
     position: relative;
-
 }
 .item-masonry img{
     width: 100%;
@@ -42,11 +41,25 @@
     width: 100%;
     top: 0;
     bottom: 0;
+    z-index: 0;
     display: none;
 }
-.cover-item-gallery a i{
+.item-masonry a i{
     color: white;
+    padding: 3%;
+    background: #14B9D5;
     position: absolute;
     top: 50%;
-    left: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+.item-masonry:hover a i{
+    display: inline;
+    z-index: 2;
+}
+.item-masonry .fa-search{
+    left: 33%;
+}
+.item-masonry .fa-expand{
+    left: 58%;
 }
